@@ -1,0 +1,38 @@
+<h3>Action Command Definitions</h3>
+<p>OctoPrint will respond to three built-in action commands.  This table allows you to add user commands with corresponding actions.</p>    
+<form class="form-horizontal">
+    <div class="row-fluid">
+        <div class="span3"><h3>Action</h4></div>
+        <div class="span2"><h3>Type</h4></div>
+        <div class="span5"><h3>Command</h4></div>
+        <div class="span1"><h3>Enable</h4></div>
+    </div>
+    <div data-bind="foreach: command_definitions">
+        <div class="row-fluid" style="margin-bottom: 5px">
+            <div class="span3 input-prepend">
+				<span class="add-on">action:</span>
+                <input type="text" class="span8 input-mini text-left" data-bind="value: action">
+            </div>
+            <div class="span2">
+                <select class="span12" id=type data-bind="value: type">
+                    <option value="system">system</option>
+                    <option value="gcode">gcode</option>
+                </select>
+            </div>
+            <div class="span5">
+                <input type="text" class="input-block-level" data-bind="value: command">
+            </div>
+            <div class="span1">
+                <input type="checkbox" data-bind="checked: enabled">
+            </div>
+            <div class="span1">
+                <a title="Remove Command Definition" class="btn btn-danger" data-bind="click: $parent.removeCommandDefinition"><i class="icon-trash"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="offset11 span1">
+            <a title="Add Command Definition" class="btn btn-primary" data-bind="click: addCommandDefinition"><i class="icon-plus"></i></a>
+        </div>
+    </div>
+</form>

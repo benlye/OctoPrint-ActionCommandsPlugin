@@ -7,7 +7,7 @@ $(function() {
         self.command_definitions = ko.observableArray();
 
         self.addCommandDefinition = function() {
-            self.command_definitions.push({action:"", type:"", command:"", enabled: false});
+            self.command_definitions.push({action:"", type:"", command:"", enabled: true});
         };
 
         self.removeCommandDefinition = function(definition) {

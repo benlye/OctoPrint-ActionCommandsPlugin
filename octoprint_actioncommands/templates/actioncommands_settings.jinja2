@@ -1,28 +1,30 @@
 <h3>Action Command Definitions</h3>
-<p>OctoPrint will respond to three built-in action commands.  This table allows you to add user commands with corresponding actions.</p>    
+<p>OctoPrint will, by default, respond to three action commands: <code>action:disconnect</code> (disconnects the printer), <code>action:pause</code> 
+(pauses streaming the print job), and <code>action:resume</code> (resumes streaming the print job).</p>
+<p>Additional action commands and corresponding actions for OctoPrint to take can be specified here.</p>
 <form class="form-horizontal">
     <div class="row-fluid">
-        <div class="span3"><h3>Action</h4></div>
-        <div class="span2"><h3>Type</h4></div>
-        <div class="span5"><h3>Command</h4></div>
-        <div class="span1"><h3>Enable</h4></div>
+        <div class="span3"><h4>Action</h4></div>
+        <div class="span2"><h4>Type</h4></div>
+        <div class="span5"><h4>Command</h4></div>
+        <div class="span1"><h4>Enable</h4></div>
     </div>
     <div data-bind="foreach: command_definitions">
         <div class="row-fluid" style="margin-bottom: 5px">
-            <div class="span3 input-prepend">
-				<span class="add-on">action:</span>
+            <div class="span3 input-prepend control-group" title="The action command which the printer will send">
+				        <span class="add-on">action:</span>
                 <input type="text" class="span8 input-mini text-left" data-bind="value: action">
             </div>
-            <div class="span2">
+            <div class="span2 control-group" title="Gcode commands are sent to the printer, system commands are executed by the OctoPrint host">
                 <select class="span12" id=type data-bind="value: type">
                     <option value="system">system</option>
                     <option value="gcode">gcode</option>
                 </select>
             </div>
-            <div class="span5">
+            <div class="span5 control-group" title="The gcode to send or command to execute. Separate multiple gcode commands with semi-colons.">
                 <input type="text" class="input-block-level" data-bind="value: command">
             </div>
-            <div class="span1">
+            <div class="span1 control-group" title="Enable or disable this action command">
                 <input type="checkbox" data-bind="checked: enabled">
             </div>
             <div class="span1">

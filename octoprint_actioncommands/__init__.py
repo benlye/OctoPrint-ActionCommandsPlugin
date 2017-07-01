@@ -104,7 +104,7 @@ class ActionCommandsPlugin(octoprint.plugin.TemplatePlugin,
         if this_command["type"] == "gcode":
             self._logger.info("Command 'action:%s' is type 'gcode'" % (command))
             self._logger.info("Executing printer command '%s'" % (this_command["command"]))
-            self._printer.commands(this_command["command"])
+            self._printer.commands(this_command["command"].split(";"))
 
         elif this_command["type"] == "system":
             self._logger.info("Command 'action:%s' is type 'system'" % (command))

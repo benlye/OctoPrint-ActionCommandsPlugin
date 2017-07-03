@@ -12,5 +12,8 @@ As of the latest Marlin bugfix-1.1.x version, the command `M118` can be used to 
 A future application of the plugin would be to add actions in the RepRap machine's firmware so that hosts could respond.  For example, when Marlin is killed because something is wrong it would echo `//action:poweroff` and the attached OctoPrint instance could use this action command to trigger the printer's power outlet to switch off.
 
 ## References
-* (OctoPrint Documentation)[http://docs.octoprint.org/en/master/features/action_commands.html]
-* (RepRap Wiki)[http://reprap.org/wiki/Gcode#Replies_from_the_RepRap_machine_to_the_host_computer]
+* [OctoPrint Documentation](http://docs.octoprint.org/en/master/features/action_commands.html)
+* [RepRap Wiki](http://reprap.org/wiki/Gcode#Replies_from_the_RepRap_machine_to_the_host_computer)
+
+## Screenshot
+![Settings](images/settings.png?raw=true)

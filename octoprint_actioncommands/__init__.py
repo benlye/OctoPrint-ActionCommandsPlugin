@@ -10,7 +10,8 @@ import octoprint.plugin
 import octoprint.settings
 
 __plugin_name__ = "Action Commands"
-__plugin_version__ = "0.1"
+__plugin_version__ = "0.2"
+__plugin_pythoncompat__ = ">=2.7,<4"
 
 def __plugin_init__():
     global _plugin

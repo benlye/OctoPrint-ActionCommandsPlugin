@@ -81,7 +81,7 @@ class ActionCommandsPlugin(octoprint.plugin.TemplatePlugin,
         )
     )
 
-    def hook_actioncommands(self, comm, line, command):
+    def hook_actioncommands(self, comm, line, command, *args, **kwargs):
         self._logger.info("Command received: 'action:%s'" % (command))
         
         if command == None:

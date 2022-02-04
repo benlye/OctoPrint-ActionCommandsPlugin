@@ -88,6 +88,9 @@ class ActionCommandsPlugin(octoprint.plugin.TemplatePlugin,
             return
 
         else:
+            if ";" in command:
+                command = command.split(';')[0]
+                command = command.strip()
             try:
                 this_command = self.command_definitions[command]
                 self._logger.info("Command found for 'action:%s'" % (command))
